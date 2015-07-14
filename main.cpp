@@ -1,5 +1,6 @@
 #include <iostream>
 #include<ctime>
+#include <cmath>
 #include<cstdlib>
 #define SIZEE 21
 #define SIZE 10
@@ -74,6 +75,10 @@ void gistogramma(double*Array){
     }
 }
 
+void logarithm (double a1, double b1, double& x1){
+    x1=log10(b1)/log10(a1);
+}
+
 int main(void){
     double B[SIZE];
     srand(time(NULL));
@@ -82,7 +87,7 @@ int main(void){
     }
     cout<<"random:"<<endl;
     show(B);
-    sortvozr(B);
+    sortubiv(B);
     cout<<"po vozrastaniu:"<<endl;
     show(B);
     cout<<"maximum:";
@@ -95,5 +100,10 @@ int main(void){
     otritcatelnie(B);
     cout<<"gistogramma:"<<endl;
     gistogramma(B);
+    cout<<"Vvedite osnovanie:";double a;cin>>a;
+    cout<<"Vvedite 4islo:";double b;cin>>b;
+    double x;
+    logarithm (a,b,x);
+    cout<<"Log"<<a<<" "<<b<<"="<<x;
 }
 
