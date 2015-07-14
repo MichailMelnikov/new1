@@ -22,18 +22,6 @@ void sortubiv(double *Array){
     }
 }
 
-void sortvozr(double *Array){
-    for(int i=0; i<SIZE; i++){
-        for(int j=i; j<SIZE; j++){
-                if(Array[i]>Array[j]){
-                double temp = Array[i];
-                Array[i] = Array[j];
-                Array[j] = temp;
-            }
-        }
-    }
-}
-
 void maximum(double *Array){
     int max=Array[-10];
     for(int i=0; i<SIZE; i++){
@@ -93,9 +81,6 @@ int main(void){
         B[i]=double(rand()%21-10);
     }
     cout<<"random:"<<endl;
-    show(B);
-    sortubiv(B);
-    cout<<"po ubivaniu:"<<endl;
     show(B);
     sortvozr(B);
     cout<<"po vozrastaniu:"<<endl;
